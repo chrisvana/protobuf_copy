@@ -147,16 +147,16 @@
  { "gen_sh": {
     "name": "generate_java_descriptor_proto",
     "build_cmd": "mkdir -p $GEN_DIR/java/src/main/java; $OBJ_DIR/protoc --java_out=$GEN_DIR/java/src/main/java -Isrc src/google/protobuf/descriptor.proto",
-    "outs": [ "src/main/java/com/google/protobuf/DescriptorProtos.java" ],
+    "outs": [ "$GEN_DIR/src/main/java/com/google/protobuf/DescriptorProtos.java" ],
     "dependencies": [ ":protoc" ]
  } },
 
  { "gen_sh": {
     "name": "generate_py_descriptor_proto",
     "build_cmd": "mkdir -p $GEN_DIR/python; $OBJ_DIR/protoc --python_out=$GEN_DIR/python -Isrc src/google/protobuf/descriptor.proto src/google/protobuf/compiler/plugin.proto && touch $GEN_DIR/python/google/protobuf/compiler/__init__.py",
-    "outs": [ "python/google/protobuf/descriptor_pb2.py",
-              "python/google/protobuf/compiler/plugin_pb2.py",
-              "python/google/protobuf/compiler/__init__.py"
+    "outs": [ "$GEN_DIR/python/google/protobuf/descriptor_pb2.py",
+              "$GEN_DIR/python/google/protobuf/compiler/plugin_pb2.py",
+              "$GEN_DIR/python/google/protobuf/compiler/__init__.py"
      ],
     "dependencies": [ ":protoc" ]
  } },
