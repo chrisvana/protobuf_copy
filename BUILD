@@ -6,14 +6,15 @@
 
  { "cc_library": {
     "name": "cc_proto",
-    "dependencies": [ ":proto_lib" ]
+    "dependencies": [ ":proto_lib", ":protoc" ]
  } },
 
  { "go_library": {
-    "name": "go_proto"
+    "name": "go_proto",
     // TODO(cvanarsdale):
-    // This is a empty rule, you should install go via:
-    // https://code.google.com/p/goprotobuf/.
+    // For now, this is an empty rule. You should install goprotobuf on your
+    // system (see https://code.google.com/p/goprotobuf/).
+    "dependencies": [ ":protoc" ]
  } },
 
  { "java_library": {
