@@ -20,8 +20,7 @@
  { "java_library": {
     "name": "java_proto",
     "java_sources": [ "java/src/main/java/com/google/protobuf/*.java" ],
-    "java_out_root": "java/src/main/java",
-    "java_additional_classpaths": [ "$GEN_DIR/java/src/main/java" ],
+    "java_root": "java/src/main/java",
     "dependencies": [ ":generate_java_descriptor_proto" ]
  } },
 
