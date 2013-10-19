@@ -1,7 +1,8 @@
 [
  { "config": {
     "component": "google",
-    "component_root": "src/google"
+    "component_root": "src/google",
+    "licenses": [ "http://opensource.org/licenses/BSD-3-Clause" ]
  } },
 
  { "cc_library": {
