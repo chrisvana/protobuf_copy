@@ -5,6 +5,11 @@
     "licenses": [ "http://opensource.org/licenses/BSD-3-Clause" ]
  } },
 
+ { "plugin": {
+    "name": "proto_library",
+    "command": "cd $SRC_DIR; go run proto_library_plugin.go"
+ } },
+
  { "cc_library": {
     "name": "cc_proto",
     "dependencies": [ ":proto_lib", ":protoc" ]
