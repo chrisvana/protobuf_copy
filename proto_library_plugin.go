@@ -49,7 +49,7 @@ func main() {
   // Add "py": {} section
   py_section := make(map[string]interface{})
   py_section["support_library"] = "//third_party/protobuf:py_proto"
-  py_section["translator_args"] = [1]string{ "--py_out=$TRANSLATOR_OUTPUT" }
+  py_section["translator_args"] = [1]string{ "--python_out=$TRANSLATOR_OUTPUT" }
   node["py"] = py_section
 
   // Add "go": {} section
