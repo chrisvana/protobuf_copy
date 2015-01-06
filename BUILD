@@ -146,7 +146,8 @@
                     "src/google/protobuf/wire_format.cc",
                     "src/google/protobuf/wire_format_lite.cc"
     ],
-  "cc_compile_args": [ "-Wno-error=unused-function" ],
+  "cc_compile_args": [ "-Wno-error=unused-function",
+                       "-Wno-error=unused-const-variable" ],
   "cc_linker_args": ["-lz"]
  } },
 
